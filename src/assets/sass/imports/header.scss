@@ -1,0 +1,318 @@
+.main-header {
+  .logo {
+    position: relative;
+
+    @media screen and (max-width: $lg) {
+      margin-bottom: 30px;
+    }
+
+    .address {
+      position: absolute;
+      top: 0;
+      right: -148px;
+      width: 138px;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #777a74;
+
+      @media screen and (max-width: $lg) {
+        position: static;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  /* header-top
+  ====================================================*/
+  .header-top {
+    padding-top: 25px;
+    width: 100%;
+
+    &__content-top {
+      margin-bottom: 20px;
+    }
+
+    /* header-top__content-top-item
+    ====================================================*/
+    &__content-top-item {
+      margin-left: 30px;
+      font-size: 15px;
+      font-weight: 300;
+      text-align: right;
+
+      @media screen and (max-width: $md) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        cursor: pointer;
+      }
+
+      .icon {
+        font-size: 18px;
+        &::before {
+          color: #75a423;
+        }
+      }
+
+      .phone {
+        color: #10100f;
+      }
+
+      .email {
+        color: #a8c675;
+        text-decoration: underline;
+      }
+
+      .time {
+        color: #10100f;
+      }
+    }
+    /* header-top__content-top-item
+    ====================================================*/
+
+    /* menu-bar
+    ====================================================*/
+    .menu-bar {
+      display: none;
+      height: 51px;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 51px;
+      text-transform: uppercase;
+      text-align: center;
+      color: $white;
+      background: #74a424;
+
+      @media screen and (max-width: $md) {
+        display: block;
+      }
+
+      .fa {
+        float: right;
+        margin-top: 16px;
+        margin-right: 40px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    /* menu-bar
+    ====================================================*/
+
+    /* menu
+    ====================================================*/
+    .menu {
+      text-align: right;
+
+      @media screen and (max-width: $md) {
+        display: none;
+        text-align: left;
+        background: #74a424;
+      }
+
+      @media screen and (min-width: $md) {
+        display: block!important;
+      }
+
+      &__item {
+        display: inline-block;
+        vertical-align: top;
+
+        @media screen and (max-width: $md) {
+          display: block;
+        }
+
+        &.active a,
+        &:hover a {
+          text-decoration: none;
+          color: $accent;
+
+          @media screen and (max-width: $md) {
+            color: darken($accent-dark, 5%);
+          }
+        }
+      }
+
+      &__link {
+        display: block;
+        padding: 12px;
+        font-size: 17px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #10100f;
+        transition: all .4s ease;
+
+        @media screen and (max-width: $md) {
+          color: $white;
+          border-top: 1px solid #ccc;
+        }
+      }
+    }
+
+    /* menu
+    ====================================================*/
+
+    .btn {
+      @media screen and (max-width: $md) {
+        display: block;
+        text-align: center;
+      }
+
+      @media screen and (max-width: $sm) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+}
+
+/* header-top
+====================================================*/
+
+.header-bottom {
+  margin-top: 12px;
+  background: $accent;
+}
+
+/* header-categoreis-wrap
+====================================================*/
+.header-categories-wrap {
+  width: 100%;
+
+  .header-categories-navbar {
+    display: none;
+    text-align: center;
+    height: 53px;
+    line-height: 53px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $white;
+
+    @media screen and (max-width: $md) {
+      display: block;
+    }
+
+    span {
+      float: right;
+      margin-top: 18px;
+      margin-right: 40px;
+
+      &.title {
+        float: none;
+        margin-left: -100px;
+        font-weight: bold;
+
+        @media screen and (max-width: $md) {
+          margin-left: 60px;
+        }
+      }
+    }
+  }
+}
+/* header-categoreis-wrap
+====================================================*/
+
+/* header-categories
+====================================================*/
+.header-categories {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0;
+
+  @media screen and (max-width: $md) {
+    display: none;
+  }
+
+  @media screen and (min-width: $md) {
+    display: flex!important;
+  }
+
+  &__item {
+    position: relative;
+    flex-grow: 1;
+
+    &:first-child > {
+      a {
+        border-left: 1px solid #527810;
+      }
+    }
+
+    &:hover {
+      .inner {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    min-width: 70px;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    background: $accent;
+    border-right: 1px solid #527810;
+    transition: all .4s ease;
+
+    @media screen and (max-width: $md) {
+      position: relative;
+      padding-left: 30px;
+      text-align: left;
+      border-top: 1px solid #ccc;
+      z-index: 10;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background: $accent-dark;
+    }
+  }
+
+  /* inner
+  ====================================================*/
+  .inner {
+    position: absolute;
+    top: 53px;
+    left: 0;
+    display: none;
+    padding: 0 19px;
+    width: 243px;
+    min-height: 40px;
+    background: $accent-dark;
+    z-index: 20;
+
+    &__item {
+      display: block;
+    }
+
+    &__link {
+      display: block;
+      height: 36px;
+      line-height: 36px;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: $white;
+      border-bottom: 1px solid #426602;
+      transition: all .4s ease;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+  /* inner
+  ====================================================*/
+}
+
+/* header-categories
+====================================================*/
